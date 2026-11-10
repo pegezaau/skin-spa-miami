@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Spa by Techy Carreño | Estética y Skin Care en Miami, FL</title>
+<meta name="description" content="Skin Spa by Techy Carreño en Kendall, Miami, FL — estética regenerativa: faciales, PDRN de salmón, plasma rico en plaquetas (PRP), exosomas y cuidado de la piel. Calificación 5.0 en Google. Reserva por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F3; --surface:#FFFFFF; --plum:#472B3A; --plum-2:#5E3A4E;
+  --rose:#B76E79; --rose-soft:#F3E2E0; --blush:#C99BA3; --gold:#B08D4F; --ink:#33222B;
+  --muted:#75616B; --line:#EADCD6; --wa:#22b358;
+  --shadow:0 18px 45px rgba(71,43,58,.10); --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--plum)}
+img{max-width:100%}
+a{color:inherit}
+.wrap{width:min(1140px,92%);margin:0 auto}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:800;color:var(--rose);margin-bottom:.9rem}
+section{padding:5.2rem 0}
+.btn{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;padding:.95rem 1.7rem;font-weight:700;font-size:.98rem;text-decoration:none;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 28px rgba(34,179,88,.30)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
+.btn-ghost:hover{background:var(--plum);color:#fff}
+.btn svg{width:19px;height:19px;flex:none}
+/* Header */
+header{position:sticky;top:0;z-index:60;background:rgba(251,247,243,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.logo-mark{width:42px;height:42px;flex:none;border-radius:50%;background:linear-gradient(145deg,var(--plum),var(--plum-2));color:var(--rose-soft);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
+.logo b{font-family:'Fraunces',serif;font-weight:600;font-size:1.06rem;color:var(--plum);line-height:1.15;display:block}
+.logo span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font-weight:800}
+nav.main{display:flex;gap:1.9rem}
+nav.main a{text-decoration:none;font-weight:600;font-size:.93rem;color:var(--ink)}
+nav.main a:hover{color:var(--rose)}
+.header-cta{padding:.65rem 1.25rem;font-size:.9rem}
+.burger{display:none;background:none;border:0;font-size:1.5rem;color:var(--plum);cursor:pointer}
+/* Hero */
+.hero{position:relative;padding:4.6rem 0 5.4rem;overflow:hidden;background:
+  radial-gradient(900px 480px at 85% -10%,rgba(183,110,121,.15),transparent 60%),
+  radial-gradient(700px 420px at -10% 110%,rgba(176,141,79,.12),transparent 60%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3.2rem;align-items:center}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);line-height:1.08;margin-bottom:1.2rem}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p.lead{font-size:1.13rem;color:var(--muted);max-width:34rem;margin-bottom:2rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.45rem .95rem;font-size:.85rem;font-weight:600;color:var(--plum);display:inline-flex;gap:.45rem;align-items:center}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.hero-card{background:var(--plum);border-radius:26px;padding:2.4rem;color:#F7EDEA;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-card::after{content:"";position:absolute;inset:auto -70px -90px auto;width:250px;height:250px;border-radius:50%;border:1px solid rgba(243,226,224,.30)}
+.hero-card h3{color:#fff;font-size:1.5rem;margin-bottom:.6rem}
+.hero-card p{color:#E2CBC6;font-size:.98rem;margin-bottom:1.4rem}
+.hero-card .row{display:flex;gap:1.6rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:1.3rem}
+.hero-card .row div b{display:block;color:#fff;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600}
+.hero-card .row div span{font-size:.8rem;color:#C7A49E;letter-spacing:.04em}
+/* Values */
+.values{background:var(--surface);border-block:1px solid var(--line);padding:2.6rem 0}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.value{display:flex;gap:1rem;align-items:flex-start}
+.value .ic{width:46px;height:46px;flex:none;border-radius:14px;background:#F7ECE8;display:grid;place-items:center;color:var(--rose)}
+.value .ic svg{width:22px;height:22px}
+.value b{display:block;color:var(--plum);margin-bottom:.2rem}
+.value p{font-size:.92rem;color:var(--muted)}
+/* Explorer */
+.sec-head{max-width:44rem;margin-bottom:2.6rem}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;margin-bottom:.8rem}
+.sec-head p{color:var(--muted)}
+.explorer{display:grid;grid-template-columns:340px 1fr;gap:1.6rem;align-items:start}
+.treat-list{display:flex;flex-direction:column;gap:.6rem}
+.treat-btn{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;font:inherit;font-weight:700;color:var(--plum);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.2s}
+.treat-btn:hover{border-color:var(--rose)}
+.treat-btn.active{background:var(--plum);color:#fff;border-color:var(--plum)}
+.treat-btn .arr{opacity:.5;font-weight:400}
+.treat-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2.2rem;box-shadow:var(--shadow);min-height:320px}
+.treat-panel h3{font-size:1.55rem;margin-bottom:.7rem}
+.treat-panel p{color:var(--muted);margin-bottom:1rem}
+.treat-panel ul{list-style:none;margin:0 0 1.6rem}
+.treat-panel li{padding:.45rem 0 .45rem 1.7rem;position:relative;color:var(--ink);font-size:.97rem}
+.treat-panel li::before{content:"";position:absolute;left:0;top:.95rem;width:.85rem;height:.45rem;border-left:2px solid var(--rose);border-bottom:2px solid var(--rose);transform:rotate(-45deg)}
+/* Steps */
+.steps{background:linear-gradient(180deg,#F7ECE8,transparent)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.9rem}
+.step .n{font-family:'Fraunces',serif;font-size:2rem;color:var(--rose);display:block;margin-bottom:.6rem}
+.step b{color:var(--plum);display:block;margin-bottom:.35rem}
+.step p{color:var(--muted);font-size:.94rem}
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-grid p{color:var(--muted);margin-bottom:1rem}
+.about-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
+.about-card h3{font-size:1.3rem;margin-bottom:1rem}
+.about-card dl{display:grid;gap:.85rem}
+.about-card dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:800}
+.about-card dd{font-weight:600;color:var(--plum)}
+/* FAQ */
+.faq{max-width:820px}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:.7rem;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;font:inherit;font-weight:700;color:var(--plum);text-align:left;padding:1.15rem 1.4rem;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq-q .plus{font-size:1.3rem;color:var(--rose);transition:.25s;flex:none}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 1.4rem 1.25rem;color:var(--muted);font-size:.96rem}
+/* Form */
+.contact{background:var(--plum);color:#F0E2DE}
+.contact h2{color:#fff}
+.contact .sec-head p{color:#CBA79F}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+form{display:grid;gap:.9rem}
+label{font-size:.85rem;font-weight:700;color:#F7EDEA;display:grid;gap:.4rem}
+input,select,textarea{font:inherit;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;width:100%}
+input::placeholder,textarea::placeholder{color:#B08E88}
+select option{color:var(--ink)}
+textarea{resize:vertical;min-height:96px}
+.contact-info{display:grid;gap:1.4rem}
+.contact-info .item b{color:#fff;display:block;margin-bottom:.25rem;font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600}
+.contact-info .item p,.contact-info .item a{color:#E2CBC6;text-decoration:none}
+.contact-info .item a:hover{color:#fff}
+/* Footer */
+footer{padding:2.6rem 0 6.5rem;background:var(--bg)}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:2rem}
+.foot p{color:var(--muted);font-size:.9rem;max-width:36rem}
+.demo-note{margin-top:1.4rem;font-size:.8rem;color:#A08A90;border-top:1px dashed var(--line);padding-top:1rem}
+/* Floating WA */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 32px rgba(34,179,88,.4);transition:.25s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);flex-direction:column;padding:1.2rem 5%;gap:1rem;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  .burger{display:block}
+  .hero-grid,.about-grid,.form-grid{grid-template-columns:1fr}
+  .explorer{grid-template-columns:1fr}
+  .values-grid,.steps-grid{grid-template-columns:1fr}
+  section{padding:3.8rem 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#">
+      <span class="logo-mark">S</span>
+      <span><b>Skin Spa by Techy Carreño</b><span>Estética Regenerativa · Miami</span></span>
+    </a>
+    <nav class="main" id="mainNav">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo reservar</a>
+      <a href="#sobre">Nosotros</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-wa header-cta" href="https://wa.me/13054504714?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Skin%20Spa%20by%20Techy%20Carre%C3%B1o." target="_blank" rel="noopener">Agenda tu cita</a>
+    <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <p class="eyebrow">Estética regenerativa en Kendall, Miami</p>
+      <h1>Tu piel, renovada <em>desde adentro.</em></h1>
+      <p class="lead">En Skin Spa by Techy Carreño trabajamos con tratamientos en tendencia para tu rejuvenecimiento: faciales, PDRN de salmón, plasma rico en plaquetas y protocolos regenerativos pensados para tu piel. Tu cita empieza con un mensaje de WhatsApp.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="https://wa.me/13054504714?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Skin%20Spa%20by%20Techy%20Carre%C3%B1o." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.6 1.1 1.4 1.9 2.5 2.5.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="dot"></span> ★ 5.0 · 12 reseñas en Google</span>
+        <span class="chip"><span class="dot"></span> 9644 SW 72nd St (Sunset Drive), Miami</span>
+        <span class="chip"><span class="dot"></span> Solo con cita previa</span>
+      </div>
+    </div>
+    <div class="hero-card reveal in">
+      <h3>Tu evaluación empieza con una conversación</h3>
+      <p>Escríbenos, cuéntanos qué te preocupa de tu piel y te recomendamos el tratamiento ideal para ti — sin compromiso. Contáctanos para agendar tu tratamiento ideal.</p>
+      <a class="btn btn-wa" href="https://wa.me/13054504714?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20de%20piel." target="_blank" rel="noopener">Agenda tu evaluación</a>
+      <div class="row">
+        <div><b>+1 (305) 450-4714</b><span>WhatsApp y llamadas</span></div>
+        <div><b>Lun–Sáb</b><span>9:00 AM – 6:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="values">
+  <div class="wrap values-grid">
+    <div class="value reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.6-9.7-9A5.6 5.6 0 0 1 12 6.2 5.6 5.6 0 0 1 21.7 12C19.5 16.4 12 21 12 21z"/></svg></span>
+      <div><b>Estética regenerativa</b><p>Tratamientos que trabajan con los procesos naturales de tu piel: PDRN de salmón, PRP, exosomas y fibrina autóloga, entre las innovaciones más avanzadas en bioestimulación.</p></div>
+    </div>
+    <div class="value reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.1 4.6 5 .6-3.7 3.4 1 4.9L12 14l-4.4 2.5 1-4.9L4.9 8.2l5-.6z"/></svg></span>
+      <div><b>Calificación perfecta: 5.0</b><p>Una calificación de 5.0 estrellas en Google — clientas que se sintieron atendidas, escuchadas y en las mejores manos.</p></div>
+    </div>
+    <div class="value reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.4 2.4L15.5 9.5"/></svg></span>
+      <div><b>Evaluación antes de tratar</b><p>Cada tratamiento se indica según las condiciones de tu piel y el protocolo adecuado. La indicación y los resultados dependen de cada caso — por eso evaluamos primero.</p></div>
+    </div>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>¿Qué podemos hacer por tu piel?</h2>
+      <p>Elige un servicio para conocerlo mejor. ¿No sabes por dónde empezar? Escríbenos por WhatsApp y te orientamos hacia el tratamiento ideal para ti.</p>
+    </div>
+    <div class="explorer reveal">
+      <div class="treat-list" id="treatList"></div>
+      <div class="treat-panel" id="treatPanel"></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo reservar</p>
+      <h2>Tres pasos para tu cita</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal"><span class="n">01</span><b>Escríbenos por WhatsApp</b><p>Cuéntanos qué te preocupa de tu piel o el servicio que te interesa. Es la forma más rápida de llegar a nosotras.</p></div>
+      <div class="step reveal"><span class="n">02</span><b>Recibe tu evaluación</b><p>Evaluamos tu piel y te explicamos, con calma, qué tratamiento y protocolo se ajustan a tu caso.</p></div>
+      <div class="step reveal"><span class="n">03</span><b>Comienza tu protocolo</b><p>Inicias tu plan de tratamiento con acompañamiento y recomendaciones para cuidar tu piel también en casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" style="padding-top:1rem">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="eyebrow">Nosotros</p>
+      <h2 style="font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;margin-bottom:1rem">Un oasis de skin care en Kendall</h2>
+      <p>Ubicado en Sunset Drive, en Kendall, Skin Spa by Techy Carreño es un med spa dedicado a rejuvenecer cuerpo, mente y espíritu con servicios estéticos, tratamientos faciales y terapias holísticas.</p>
+      <p>Somos una estética regenerativa: manejamos tratamientos en tendencia para tu rejuvenecimiento y adaptamos cada protocolo a las condiciones de tu piel.</p>
+      <p>Atendemos solo con cita previa, y todas las citas se coordinan personalmente por WhatsApp — directo, cálido y sin complicaciones.</p>
+      <a class="btn btn-ghost" href="https://www.instagram.com/skinspa_miami/" target="_blank" rel="noopener">Síguenos en Instagram</a>
+    </div>
+    <div class="about-card reveal">
+      <h3>Datos útiles</h3>
+      <dl>
+        <div><dt>Dirección</dt><dd>9644 SW 72nd St (Sunset Drive), Miami, FL 33173</dd></div>
+        <div><dt>WhatsApp / Teléfono</dt><dd>+1 (305) 450-4714</dd></div>
+        <div><dt>Horario</dt><dd>Lunes a sábado · 9:00 AM – 6:00 PM · Solo con cita previa</dd></div>
+        <div><dt>Calificación</dt><dd>★ 5.0 · 12 reseñas en Google</dd></div>
+        <div><dt>Instagram</dt><dd>@skinspa_miami</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Lo que nuestras clientas preguntan</h2>
+    </div>
+    <div class="faq reveal" id="faq"></div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Agenda tu cita</h2>
+      <p>Completa el formulario y tu mensaje llega directo a nuestro WhatsApp, listo para enviar.</p>
+    </div>
+    <div class="form-grid">
+      <form id="leadForm" class="reveal">
+        <label>Tu nombre
+          <input type="text" id="fName" placeholder="Ej.: María Torres" required>
+        </label>
+        <label>Servicio (opcional)
+          <select id="fTreat">
+            <option value="">Evaluación de piel</option>
+            <option>Faciales y limpieza profunda</option>
+            <option>PDRN de Salmón</option>
+            <option>Plasma Rico en Plaquetas (PRP)</option>
+            <option>Exosomas</option>
+            <option>Fibrina Autóloga Regenerativa</option>
+            <option>Termo Tensado Epidérmico</option>
+            <option>Shiatsu</option>
+            <option>Otro servicio</option>
+          </select>
+        </label>
+        <label>Tu mensaje (opcional)
+          <textarea id="fMsg" placeholder="Cuéntanos, en pocas palabras, qué te preocupa de tu piel…"></textarea>
+        </label>
+        <button type="submit" class="btn btn-wa" style="justify-content:center">Enviar por WhatsApp</button>
+      </form>
+      <div class="contact-info reveal">
+        <div class="item"><b>Dirección</b><p>9644 SW 72nd St (Sunset Drive)<br>Miami, FL 33173</p></div>
+        <div class="item"><b>WhatsApp / Teléfono</b><p><a href="https://wa.me/13054504714" target="_blank" rel="noopener">+1 (305) 450-4714</a></p></div>
+        <div class="item"><b>Horario</b><p>Lunes a sábado · 9:00 AM – 6:00 PM<br>Solo con cita previa</p></div>
+        <div class="item"><b>Instagram</b><p><a href="https://www.instagram.com/skinspa_miami/" target="_blank" rel="noopener">@skinspa_miami</a></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="logo" href="#" style="margin-bottom:.8rem">
+          <span class="logo-mark">S</span>
+          <span><b>Skin Spa by Techy Carreño</b><span>Estética Regenerativa · Miami</span></span>
+        </a>
+        <p>Estética regenerativa y skin care en Kendall, Miami — faciales, PDRN de salmón, PRP y protocolos personalizados para tu piel, con cita previa por WhatsApp.</p>
+      </div>
+      <div>
+        <p><strong style="color:var(--plum)">Contacto</strong><br>
+        9644 SW 72nd St (Sunset Drive), Miami, FL 33173<br>
+        WhatsApp: +1 (305) 450-4714<br>
+        Instagram: @skinspa_miami</p>
+      </div>
+    </div>
+    <p class="demo-note">Página de demostración — vista previa no oficial creada solo con fines de presentación.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/13054504714?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Skin%20Spa%20by%20Techy%20Carre%C3%B1o." target="_blank" rel="noopener" aria-label="Chatea por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.6 1.1 1.4 1.9 2.5 2.5.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+<script>
+var WA = "13054504714";
+var TREATS = [
+  { name:"Faciales y Limpieza Profunda",
+    desc:"Nuestro facial combina limpieza profunda con protocolos adaptados a tu piel: combinaciones como dermaplaning + facial básico dejan la piel renovada, suave y luminosa. Es el punto de partida ideal si es tu primera visita.",
+    points:["Limpieza profunda y renovación de la piel","Combinaciones con dermaplaning para un acabado luminoso","Ideal como primera visita y como mantenimiento"],
+    ask:"Faciales y Limpieza Profunda" },
+  { name:"PDRN de Salmón",
+    desc:"El PDRN de salmón es un activo biotecnológico derivado de fragmentos de ADN de salmón, conocido por su potencial para favorecer la reparación y regeneración de la piel — el secreto de una piel más joven y luminosa.",
+    points:["Activo biotecnológico de origen marino","Favorece la reparación y regeneración de la piel","La indicación depende de las condiciones de cada piel"],
+    ask:"PDRN de Salmón" },
+  { name:"Plasma Rico en Plaquetas (PRP)",
+    desc:"El PRP facial utiliza el plasma obtenido de tu propia sangre, procesado para concentrar las plaquetas y aprovechar sus factores de crecimiento, estimulando los procesos naturales de regeneración de la piel.",
+    points:["Se obtiene de tu propia sangre — 100% autólogo","Estimula la regeneración natural de la piel","Se usa en rostro, cuello y escote, según el caso"],
+    ask:"Plasma Rico en Plaquetas (PRP)" },
+  { name:"Exosomas",
+    desc:"Los exosomas son una de las innovaciones más recientes en estética regenerativa y bioestimulación celular. En Skin Spa los comparamos y combinamos dentro de protocolos regenerativos avanzados, siempre tras una evaluación de tu piel.",
+    points:["Innovación en bioestimulación celular","Parte de nuestros protocolos regenerativos avanzados","Siempre con evaluación previa de la piel"],
+    ask:"Exosomas" },
+  { name:"Fibrina Autóloga Regenerativa",
+    desc:"La fibrina autóloga regenerativa es una de las innovaciones más avanzadas en bioestimulación celular: se obtiene de tu propio organismo y se integra en protocolos que buscan apoyar la renovación de la piel.",
+    points:["Obtenida de tu propio organismo","Bioestimulación celular avanzada","Protocolo definido tras la evaluación"],
+    ask:"Fibrina Autóloga Regenerativa" },
+  { name:"Termo Tensado Epidérmico",
+    desc:"El termo tensado epidérmico es un tratamiento estético diseñado para mejorar la firmeza, la elasticidad y la textura de la piel, ayudando a estimular la producción de colágeno y a suavizar la apariencia de líneas de expresión.",
+    points:["Mejora firmeza, elasticidad y textura","Ayuda a estimular la producción de colágeno","Zonas como rostro (mejillas), cuello y mentón"],
+    ask:"Termo Tensado Epidérmico" },
+  { name:"Shiatsu",
+    desc:"El shiatsu es el arte japonés del bienestar: una terapia corporal de presión que ayuda a liberar tensiones y a recuperar el equilibrio del cuerpo y la mente, como complemento de tu cuidado de la piel.",
+    points:["Terapia corporal japonesa de presión","Ayuda a liberar tensiones y a relajarte","El complemento de bienestar de tu visita"],
+    ask:"Shiatsu" }
+];
+var FAQS = [
+  { q:"¿Cómo agendo una cita?",
+    a:"La forma más rápida es WhatsApp: escríbenos al +1 (305) 450-4714 con tu nombre y el servicio que te interesa, y coordinamos tu cita. Atendemos solo con cita previa." },
+  { q:"¿Qué tratamiento es el ideal para mi piel?",
+    a:"No tienes que saberlo tú — para eso está la evaluación. Revisamos las condiciones de tu piel y te recomendamos el protocolo adecuado; la indicación y los resultados dependen de cada piel." },
+  { q:"¿Qué es el PDRN de salmón?",
+    a:"Es un activo biotecnológico derivado de fragmentos de ADN de salmón, conocido por su potencial para favorecer la reparación y regeneración de la piel. En tu evaluación te explicamos si es indicado para ti." },
+  { q:"¿El PRP usa mi propia sangre?",
+    a:"Sí. El plasma rico en plaquetas se obtiene de una muestra de tu propia sangre, que se procesa para concentrar las plaquetas y aprovechar los factores de crecimiento que contienen." },
+  { q:"¿Dónde están ubicados?",
+    a:"Estamos en 9644 SW 72nd St (Sunset Drive), en Kendall, Miami, FL 33173. Escríbenos por WhatsApp antes de venir para coordinar tu cita." },
+  { q:"¿Cuál es el horario de atención?",
+    a:"Atendemos de lunes a sábado, de 9:00 AM a 6:00 PM, solo con cita previa. Envíanos un WhatsApp y te ofrecemos los horarios disponibles." }
+];
+var list = document.getElementById('treatList');
+var panel = document.getElementById('treatPanel');
+function waLink(text){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
+function showTreat(i){
+  var t = TREATS[i];
+  document.querySelectorAll('.treat-btn').forEach(function(b,j){ b.classList.toggle('active', j===i); });
+  panel.innerHTML = "<h3>" + t.name + "</h3><p>" + t.desc + "</p><ul>" +
+    t.points.map(function(p){ return "<li>" + p + "</li>"; }).join("") +
+    "</ul><a class='btn btn-wa' target='_blank' rel='noopener' href='" +
+    waLink("Hola, quiero información sobre " + t.ask + " en Skin Spa by Techy Carreño.") +
+    "'>Preguntar por " + t.name + "</a>";
+}
+TREATS.forEach(function(t,i){
+  var b = document.createElement('button');
+  b.className = 'treat-btn'; b.type = 'button';
+  b.innerHTML = t.name + " <span class='arr'>→</span>";
+  b.addEventListener('click', function(){ showTreat(i); });
+  list.appendChild(b);
+});
+showTreat(0);
+var faqBox = document.getElementById('faq');
+FAQS.forEach(function(f){
+  var item = document.createElement('div'); item.className = 'faq-item';
+  item.innerHTML = "<button class='faq-q' type='button'>" + f.q + "<span class='plus'>+</span></button><div class='faq-a'><p>" + f.a + "</p></div>";
+  var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+  q.addEventListener('click', function(){
+    var open = item.classList.toggle('open');
+    a.style.maxHeight = open ? a.scrollHeight + "px" : "0px";
+  });
+  faqBox.appendChild(item);
+});
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('fName').value.trim();
+  var treat = document.getElementById('fTreat').value;
+  var msg = document.getElementById('fMsg').value.trim();
+  var text = "Hola, mi nombre es " + name + ".";
+  text += treat ? " Quiero información sobre: " + treat + "." : " Quiero agendar una evaluación de piel.";
+  if (msg) text += " " + msg;
+  window.open(waLink(text), '_blank');
+});
+document.getElementById('burger').addEventListener('click', function(){
+  document.getElementById('mainNav').classList.toggle('open');
+});
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if (en.isIntersecting) en.target.classList.add('in'); });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
